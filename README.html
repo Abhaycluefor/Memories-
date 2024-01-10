@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories with Classmates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #3498db;
+            padding: 10px;
+            color: #fff;
+            font-size: 24px;
+        }
+        section {
+            margin-top: 20px;
+            text-align: left;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #messages {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 100px;
+            margin-top: 10px;
+        }
+        footer {
+            margin-top: 20px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Memories with Classmates
+    </header>
+
+    <section>
+        <h2>Dear Friends,</h2>
+        <p>
+            Welcome to our memory website! This is a place to celebrate our last year together.
+            Leave your messages below, and they will be added to our shared memories.
+        </p>
+
+        <!-- Form for submitting messages -->
+        <form action="https://formspree.io/YOUR_EMAIL" method="POST">
+            <input type="text" name="message" id="messageInput" style="width: 80%; padding: 5px;" placeholder="Add your message...">
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- Display messages -->
+        <div id="messages"></div>
+
+    </section>
+
+    <footer>
+        &copy; 2024 Memories with Classmates
+    </footer>
+
+    <script>
+        // Update YOUR_EMAIL with your email address
+        const formAction = "https://formspree.io/YOUR_EMAIL";
+        const messagesDiv = document.getElementById("messages");
+
+        // Function to load messages from formspree
+        async function loadMessages() {
+            const response = await fetch(`${formAction}?_format=json`);
+            const data = await response.json();
+            data.forEach(entry => {
+                const message = document.createElement("p");
+                message.textContent = entry.message;
+                messagesDiv.appendChild(message);
+            });
+        }
+
+        // Load messages when the page loads
+        window.onload = loadMessages;
+    </script>
+<?pph 
+		Sserver -
+
+Susername
+
+Spassword
+
+Sdbname ->
+
+Sconn.mysqli_connect($server, Susername, Spassword, Sdbname);
+
+if(!$conn)(
+
+die("Connection Failed:".mysqli_connect_error());
+
+}
+</body>
+  </html>
+  
